@@ -1,6 +1,7 @@
-import { LoginForm } from "@/components/login-form"
+import { ResetPasswordForm } from "@/components/reset-password-form"
+import { Suspense } from "react"
 
-export default function LoginPage() {
+export default function ResetPasswordPage() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="bg-muted relative hidden lg:block">
@@ -14,14 +15,15 @@ export default function LoginPage() {
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
             <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
-              {/* <GalleryVerticalEnd className="size-4" /> */}
             </div>
             Smatpay
           </a>
         </div>
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
-            <LoginForm />
+            <Suspense fallback={<div>Loading...</div>}>
+              <ResetPasswordForm />
+            </Suspense>
           </div>
         </div>
       </div>
