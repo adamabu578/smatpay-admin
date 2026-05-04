@@ -188,7 +188,7 @@ function UserTable() {
     try {
       setIsProgress(true);
       const response = await httpClient.post(`${URLHelper.topup}`, {
-        id: userToTopup?.id,
+        userId: userToTopup?.id,
         amount,
       });
       console.log(response);
