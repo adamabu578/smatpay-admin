@@ -199,7 +199,7 @@ export function ServiceForm({ serviceId }: { serviceId: string }) {
                         <FormItem>
                           <FormLabel>Service Code</FormLabel>
                           <FormControl>
-                            <Input placeholder="vtu-mtn" {...field} disabled={!isNew} />
+                            <Input placeholder="vtu-mtn" {...field} />
                           </FormControl>
                           <FormDescription>Unique identifier used by core systems.</FormDescription>
                           <FormMessage />
